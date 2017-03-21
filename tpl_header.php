@@ -41,7 +41,7 @@ $showSidebar = $hasSidebar && ($ACT == 'show');
                     <?php
                     // get logo either out of the template images folder or data/media folder
                     $logoSize = array(200,30);
-                    $logo = tpl_getMediaFile(array(':wiki:logo.png', ':logo.png', 'images/logo.png'), false, $logoSize);
+                    $logo = tpl_getMediaFile(array('images/logo.png', 'images/logo.png', 'images/logo.png'), false, $logoSize);
 
                     // display logo and wiki title in a link to the home page
                     tpl_link(
@@ -77,11 +77,7 @@ $showSidebar = $hasSidebar && ($ACT == 'show');
                     <nav>
                         <ul class="external">
                             <?php
-                            if (!empty($_SERVER['REMOTE_USER'])) {
-                                echo '<li class="user">';
-                                tpl_userinfo(); /* 'Logged in as ...' */
-                                echo '</li>';
-                            }
+
                             tpl_toolsevent('usertools', array(
                                 tpl_action('admin', true, 'li', true),
                                 tpl_action('profile', true, 'li', true),
@@ -95,6 +91,15 @@ $showSidebar = $hasSidebar && ($ACT == 'show');
                 <article id="content">
 
                     <!-- BREADCRUMBS -->
+                    <ul class="external">
+                        <?php
+                        if (!empty($_SERVER['REMOTE_USER'])) {
+                            echo '<li class="user">';
+                            tpl_userinfo(); /* 'Logged in as ...' */
+                            echo '</li>';
+                        }
+                        ?>
+                    </ul>
                     <?php if($conf['breadcrumbs'] || $conf['youarehere']): ?>
                         <div class="breadcrumbs">
                             <?php if($conf['youarehere']): ?>
