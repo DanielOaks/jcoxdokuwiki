@@ -10,10 +10,6 @@
     border: 0
 }
 
-ul {
-    list-style: none;
-}
-
 html {
     height: 100%
 }
@@ -23,14 +19,41 @@ html {
     overflow: hidden;
 }
 
-body,
-ul {
+body{
     margin: 0;
     padding: 0;
 }
 
-ul {
+ul + ul {
+    margin-top: 1.5em;
+}
+
+.level1 :not(.toc) li + li,
+.level2 :not(.toc) li + li,
+.level3 :not(.toc) li + li,
+.level4 :not(.toc) li + li {
+    margin-top: 0.5em !important;
+}
+.level1 ul:not(.toc) li,
+.level2 ul:not(.toc) li,
+.level3 ul:not(.toc) li,
+.level4 ul:not(.toc) li {
     list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+.level1 ul:not(.toc) li::before,
+.level2 ul:not(.toc) li::before,
+.level3 ul:not(.toc) li::before,
+.level4 ul:not(.toc) li::before {
+    color: #4a4a4a;
+    content: "\2022";
+    font-size: 1em;
+    width: 1.3em;
+    flex: 0 0 auto;
 }
 
 a {
@@ -346,7 +369,6 @@ form.search input {
 
 #content {
     position: relative;
-    padding-top: 43px;
     padding-left: 32px;
     margin: 0 25px 0 0;
     border-top: 1px solid rgba(120, 134, 156, .08);
@@ -386,6 +408,17 @@ header#main-header {
     max-width: 770px;
     width: calc(45%);
     min-width: 500px;
+}
+
+header#main-header .user {
+    font-size: 0.83em;
+    color: #656d71;
+}
+header#main-header .user bdi {
+    color: #222;
+}
+header#main-header .user bdi:first-of-type {
+    font-size: 1.2em;
 }
 
 header#main-header ul {
@@ -469,16 +502,20 @@ nav h1{
 .dokuwiki a.wikilink1,
 .dokuwiki a.wikilink2:link,
 .dokuwiki a.wikilink2:visited{
-    display: block;
+    display: inline-block;
     font-size: 15px;
-    color: #0d2b3e;
     font-weight: 500;
-    height: 36px;
-    line-height: 36px;
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 0 8px;
     border:none;
+}
+
+.dokuwiki a.wikilink1{
+    color: #113769;
+}
+.dokuwiki a.wikilink2{
+    color: #aa1818;
 }
 
 .dokuwiki .docInfo{
@@ -615,10 +652,13 @@ nav h1{
     font-weight:bold;
 }
 .dokuwiki div.breadcrumbs {
-    border-top: 1px solid #e5f6ff;
+    border-top: none;
     border-bottom: 1px solid #e5f6ff;
     margin-bottom: 2.5em;
     padding: 10px 0;
+}
+.dokuwiki div.breadcrumbs ul {
+    margin-bottom: 0;
 }
 
 .dokuwiki a.wikilink1:hover, .dokuwiki a.wikilink2:hover{
