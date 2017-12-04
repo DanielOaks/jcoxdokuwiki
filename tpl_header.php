@@ -77,9 +77,11 @@ $showSidebar = $hasSidebar && ($ACT == 'show');
                     <nav>
                         <ul class="external">
                             <?php
+                            if (!empty($_SERVER['REMOTE_USER'])) {
                             echo '<li class="user">';
                             tpl_userinfo(); /* 'Logged in as ...' */
                             echo '</li>';
+                            }
 
                             tpl_toolsevent('usertools', array(
                                 tpl_action('admin', true, 'li', true),
