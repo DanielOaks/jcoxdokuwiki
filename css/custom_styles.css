@@ -583,8 +583,16 @@ nav h1{
     box-shadow: 0 1px 5px 0 rgba(0,0,0,.07), 0 7px 17px 0 rgba(0,0,0,.1);
 }
 
+#dw__toc:not(:first-child) {
+    margin-top: 1.2em;
+}
+
 #dw__toc a{
     font-size:15px!important;
+}
+
+#dw__toc > div {
+    padding-top: 0.2em;
 }
 
 #dw__toc ul li div.li {
@@ -593,7 +601,7 @@ nav h1{
 
 #dw__toc h3{
     font-size:22px;
-    margin-top:10px;
+    margin-top: 0;
 }
 
 .dokuwiki #admin__version {
