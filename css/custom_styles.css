@@ -473,7 +473,7 @@ header#main-header .button a:after {
 
 #edit-dash{
     padding-top: 130px;
-    width: 160px;
+    width: 180px;
     height: 500px;
     top: 0;
     vertical-align: top;
@@ -694,7 +694,7 @@ nav h1{
 }
 
 /*Responsive Styles*/
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     #edit-dash {
         width:50px;
     }
