@@ -680,6 +680,9 @@ nav h1{
 .dokuwiki div.breadcrumbs ul {
     margin-bottom: 0;
 }
+.dokuwiki div.breadcrumbs div:last-child {
+    border-bottom: none;
+}
 
 .dokuwiki a.wikilink1:hover, .dokuwiki a.wikilink2:hover{
     text-decoration:underline;
