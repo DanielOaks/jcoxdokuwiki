@@ -28,8 +28,8 @@ ul + ul {
     margin-top: 1.5em;
 }
 
-.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) li + li,
-.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) li + li, {
+.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) > li + li,
+.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) > li + li, {
     margin-top: 0.5em !important;
 }
 .content ul:not(.toc):not(.admin_tasks):not(.admin_plugins),
@@ -41,8 +41,8 @@ ul + ul {
     display: inline-block;
     margin-left: 0.6em;
 }
-.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) li::before,
-.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) li::before {
+.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) > li::before,
+.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) > li::before {
     display: inline-block;
     color: #4a4a4a;
     font-size: 1em;
@@ -50,20 +50,20 @@ ul + ul {
     width: 1.2em;
     vertical-align: top;
 }
-.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) li::before {
+.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) > li::before {
     content: "\2022";
 }
 .content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) {
     counter-reset: list;
 }
-.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) li::before {
+.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) > li::before {
     counter-increment: list;
     content: counter(list) ".";
 }
-.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) li > ol,
-.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) li > ul,
-.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) li > ol,
-.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) li > ul {
+.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) > li > ol,
+.content ul:not(.toc):not(.admin_tasks):not(.admin_plugins) > li > ul,
+.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) > li > ol,
+.content ol:not(.toc):not(.admin_tasks):not(.admin_plugins) > li > ul {
     margin-top: 0.4em;
 }
 
