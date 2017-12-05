@@ -220,7 +220,7 @@ h3,h4,h5,h6{
     transition: opacity .25s ease-in-out
 }
 
-form.search {
+form.search.topbar {
     position: absolute;
     top: 0;
     left: calc(31.5%);
@@ -228,12 +228,12 @@ form.search {
     z-index: 10020
 }
 
-form.search button{
+form.search.topbar button{
     display: none;
 }
 
 form.search-text,
-form.search input {
+form.search.topbar input {
     border:none;
     color: #939da3;
     background-color: transparent;
@@ -247,6 +247,24 @@ form.search input {
     padding: 17px 0 17px 51px;
     outline: none;
     -webkit-appearance: none
+}
+#extension__manager form.search input.edit {
+    width: 25em;
+    border:none;
+    color: #939da3;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    font-weight: normal;
+}
+#extension__manager form.search button {
+    background: url(css/img/icon-search@2x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 14px;
+    width: 14px;
+    margin-top: -6px;
 }
 
 .search input::-webkit-search-decoration {

@@ -66,7 +66,7 @@ $showSidebar = $hasSidebar && ($ACT == 'show');
                 <div class="search-results">
                     <ul class="results"></ul>
                 </div>
-                <form class="search">
+                <form class="search topbar">
                     <?php tpl_searchform(); ?>
                     <div class="search-after">
                         <span class="search-text"></span>
