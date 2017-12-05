@@ -24,6 +24,10 @@ body{
     padding: 0;
 }
 
+code {
+    color: #363d46;
+}
+
 ul + ul {
     margin-top: 1.5em;
 }
