@@ -483,6 +483,7 @@ header#main-header .button a:after {
 #edit-dash li{
     border-bottom:1px solid #eee;
     margin:0;
+    list-style: none;
 }
 #edit-dash li:last-child{
     border:none;
