@@ -28,32 +28,42 @@ ul + ul {
     margin-top: 1.5em;
 }
 
-.level1 :not(.toc) li + li,
-.level2 :not(.toc) li + li,
-.level3 :not(.toc) li + li,
-.level4 :not(.toc) li + li {
+.content ul:not(.toc) li + li,
+.content ol:not(.toc) li + li, {
     margin-top: 0.5em !important;
 }
-.level1 ul:not(.toc) li,
-.level2 ul:not(.toc) li,
-.level3 ul:not(.toc) li,
-.level4 ul:not(.toc) li {
+.content ul:not(.toc),
+.content ol:not(.toc) {
     list-style: none;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
+    margin-left: 1.3em;
 }
-.level1 ul:not(.toc) li::before,
-.level2 ul:not(.toc) li::before,
-.level3 ul:not(.toc) li::before,
-.level4 ul:not(.toc) li::before {
+.content div.li {
+    display: inline-block;
+    margin-left: 0.6em;
+}
+.content ul:not(.toc) li::before,
+.content ol:not(.toc) li::before {
+    display: inline-block;
     color: #4a4a4a;
-    content: "\2022";
     font-size: 1em;
-    width: 1.3em;
-    flex: 0 0 auto;
+    margin-left: -1.3em;
+    width: 1.2em;
+}
+.content ul:not(.toc) li::before {
+    content: "\2022";
+}
+.content ol:not(.toc) {
+    counter-reset: list;
+}
+.content ol:not(.toc) li::before {
+    counter-increment: list;
+    content: counter(list) ".";
+}
+.content ul:not(.toc) li > ol,
+.content ul:not(.toc) li > ul,
+.content ol:not(.toc) li > ol,
+.content ol:not(.toc) li > ul {
+    margin-top: 0.4em;
 }
 
 a {
