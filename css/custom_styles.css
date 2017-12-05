@@ -374,7 +374,7 @@ form.search.topbar input {
 }
 
 .filterBlock {
-    margin: 37px 0px;
+    margin: 7px 0px;
     position: relative;
 }
 #filterInput {
@@ -383,14 +383,14 @@ form.search.topbar input {
     font-size: 15px;
     outline: none;
     border: 1px solid #dedede;
-    width: 80%;
+    width: 90%;
     box-shadow: none;
     border-radius: 0;
     margin: auto;
 }
 #clearFilterButton {
     position: absolute;
-    right: 25%;
+    right: 15%;
     top: 50%;
     margin-top: -8px;
     width: 16px;
