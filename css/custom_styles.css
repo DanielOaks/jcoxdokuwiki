@@ -154,7 +154,7 @@ h3,h4,h5,h6{
     align-items: flex-end;
     -webkit-user-select: none;
     user-select: none;
-    width: 37.5%;
+    width: 31.5%;
     min-width: 252px;
     padding-left: calc((100% - 994px) / 2)
 }
@@ -202,7 +202,7 @@ h3,h4,h5,h6{
 form.search {
     position: absolute;
     top: 0;
-    left: calc(37.5%);
+    left: calc(31.5%);
     width: 300px;
     z-index: 10020
 }
@@ -263,7 +263,7 @@ form.search input {
     opacity: 0;
     top: -10px;
     padding-top: 10px;
-    left: 37.5%;
+    left: 31.5%;
     width: 768px;
     min-height: 58px;
     background: #fff;
@@ -415,7 +415,7 @@ form.search input {
 
 #content,
 header#main-header {
-    margin-left: calc(37.5%);
+    margin-left: calc(31.5%);
     max-width: 770px;
     width: calc(45%);
     min-width: 500px;
