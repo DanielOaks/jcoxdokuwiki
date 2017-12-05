@@ -498,6 +498,19 @@ header#main-header .button a:after {
 #edit-dash li i{
     margin-top:10px;
 }
+#edit-dash li.plugin_move_page > a::before {
+    font-family: FontAwesome !important;
+    display: inline-block;
+    font-size: 2em;
+    content: "\f0a9"; /*fa-arrow-circle-right*/
+}
+#edit-dash li.plugin_move_page > a span {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-top: -7px;
+}
 
 /*Overrides*/
 
@@ -707,5 +720,8 @@ nav h1{
     }
     #edit-dash ul li a p{
         display:none;
+    }
+    #edit-dash .plugin_move_page span {
+        display: none !important;
     }
 }
